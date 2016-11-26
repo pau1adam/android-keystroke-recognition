@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PressureTestActivity"></activity>
+        <activity android:name=".PressureTestActivity" />
+        <activity android:name=".EditTextKeyboadTestActivity"></activity>
     </application>
 
 </manifest>

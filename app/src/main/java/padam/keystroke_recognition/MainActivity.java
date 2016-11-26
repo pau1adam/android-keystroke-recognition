@@ -13,6 +13,7 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.goToPressureTestActivity) Button goToPressureTest;
+    @BindView(R.id.goToEditTextKeyboadTestActivity) Button goToEditTextKeyboadTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +26,11 @@ public class MainActivity extends AppCompatActivity {
     public void goToPressureTestActivity(){
         Intent pressureTestIntent = new Intent(this, PressureTestActivity.class);
         startActivity(pressureTestIntent);
+    }
+
+    @OnClick(R.id.goToEditTextKeyboadTestActivity)
+    public void goToEditTextKeyboadTestActivity(){
+        Intent editTextKeyboadTestIntent = new Intent(this, EditTextKeyboadTestActivity.class);
+        startActivity(editTextKeyboadTestIntent);
     }
 }

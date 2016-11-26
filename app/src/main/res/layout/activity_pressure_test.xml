@@ -44,5 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/resetButton" />
+        android:id="@+id/resetButton"
+        style="@style/Widget.AppCompat.Button.Colored" />
 </RelativeLayout>
