@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.goToEditTextKeyboadTestActivity)
     public void goToEditTextKeyboadTestActivity(){
-        Intent editTextKeyboadTestIntent = new Intent(this, EditTextKeyboadTestActivity.class);
+        Intent editTextKeyboadTestIntent = new Intent(this, EditTextKeyboardTestActivity.class);
         startActivity(editTextKeyboadTestIntent);
     }
 }

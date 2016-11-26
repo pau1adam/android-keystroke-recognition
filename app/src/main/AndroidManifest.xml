@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PressureTestActivity" />
-        <activity android:name=".EditTextKeyboadTestActivity"></activity>
+        <activity android:name=".EditTextKeyboardTestActivity"></activity>
     </application>
 
 </manifest>

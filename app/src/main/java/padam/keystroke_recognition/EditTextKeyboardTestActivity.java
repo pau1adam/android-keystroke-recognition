@@ -11,7 +11,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class EditTextKeyboadTestActivity extends AppCompatActivity {
+public class EditTextKeyboardTestActivity extends AppCompatActivity {
 
     @BindView(R.id.keyEventData) TextView keyEventData;
     @BindView(R.id.motionEventData) TextView motionEventData;
