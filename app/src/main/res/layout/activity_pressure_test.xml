@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_pressure_test"
     android:layout_width="match_parent"
@@ -8,6 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:gravity="clip_vertical"
     tools:context="padam.keystroke_recognition.PressureTestActivity">
 
 
@@ -15,35 +17,46 @@
         android:text="Touch anywhere on the screen to display pressure and size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
         android:id="@+id/textView4"
         android:textSize="13sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/displaySize"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="199dp"
-        android:hint="Size will be displayed here." />
+        android:id="@+id/displayMaxPressure"
+        android:layout_weight="1"
+        android:hint="Max pressure will be displayed here."
+        android:layout_above="@+id/displaySize" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/displayPressure"
+        android:layout_weight="1"
         android:hint="Pressure will be displayed here."
-        android:layout_marginBottom="76dp"
-        android:layout_above="@+id/displaySize"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/displaySize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/displayMaxSize"
+        android:hint="Max size will be displayed here." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/displaySize"
+        android:hint="Current size will be displayed here." />
 
     <Button
         android:text="Reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+
         android:id="@+id/resetButton"
         style="@style/Widget.AppCompat.Button.Colored" />
-</RelativeLayout>
+</LinearLayout>
