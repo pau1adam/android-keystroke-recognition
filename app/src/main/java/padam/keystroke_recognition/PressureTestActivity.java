@@ -45,11 +45,13 @@ public class PressureTestActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.resetButton)
-    public void resetButtonClick(){
+    public void resetButton(){
         displayPressureTextView.setText("");
         displaySizeTextView.setText("");
         displayMaxPressureTextView.setText("");
         displayMaxSizeTextView.setText("");
+        maxPressure = -1;
+        maxSize = -1;
     }
 
     private void maxValues(float pressure, float size){
