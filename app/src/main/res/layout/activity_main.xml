@@ -20,11 +20,11 @@
         android:text="EditText Keyboard Test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/goToEditTextKeyboadTestActivity"
+        android:id="@+id/goToEditTextKeyboardTestButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:elevation="0dp"
         android:layout_marginBottom="16dp"
-        android:layout_above="@+id/goToPressureTestActivity"
+        android:layout_above="@+id/goToPressureTestButton"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="47dp"
-        android:id="@+id/goToPressureTestActivity"
+        android:id="@+id/goToPressureTestButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:elevation="0dp"
         android:layout_alignParentBottom="true"
