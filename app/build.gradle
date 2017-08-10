@@ -32,7 +32,10 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile project(':keystrokecollectorkeyboard')
+    compile 'com.google.firebase:firebase-messaging:11.0.4'
 }
 repositories {
     mavenCentral()
 }
+
+apply plugin: 'com.google.gms.google-services'
