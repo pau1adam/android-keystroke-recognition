@@ -8,7 +8,12 @@ import android.view.View
 /**
  * Created by Pavlos Adam on 30-Jul-17.
  */
-class KeystrokeCollectorKeyboardView(context: Context, attrs: AttributeSet) : KeyboardView(context, attrs) {
+class KeystrokeCollectorKeyboardView : KeyboardView {
+
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
+        setOnTouchListener(touchListener)
+        onKeyboardActionListener = keyboardListener
+    }
 
     val touchListener = View.OnTouchListener { view, event ->
         TODO("not implemented")
@@ -47,11 +52,6 @@ class KeystrokeCollectorKeyboardView(context: Context, attrs: AttributeSet) : Ke
         override fun onText(text: CharSequence?) {
             TODO("not implemented")
         }
-    }
-
-    init {
-        setOnTouchListener(touchListener)
-        onKeyboardActionListener = keyboardListener
     }
 
 }
