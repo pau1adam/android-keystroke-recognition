@@ -17,14 +17,14 @@ class PressureTestActivity : AppCompatActivity() {
         resetButton.setOnClickListener { _ -> resetFields() }
     }
 
-    fun pressureTestClick(event: MotionEvent): Boolean {
+    private fun pressureTestClick(event: MotionEvent): Boolean {
         displayPressure.text = "Pressure: " + maxPressure.toString()
         displaySize.text = "Size: " + maxSize.toString()
         maxValues(event.pressure, event.size)
         return true
     }
 
-    fun resetFields() {
+    private fun resetFields() {
         displayPressure.text = ""
         displaySize.text = ""
         displayMaxPressure.text = ""
