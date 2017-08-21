@@ -11,70 +11,69 @@
     tools:context="padam.keystroke_recognition.EditTextKeyboardTestActivity">
 
     <EditText
+        android:id="@+id/inputEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="151dp"
-        android:id="@+id/inputEditText"
-        android:hint="type something" />
+        android:ems="10"
+        android:hint="type something"
+        android:inputType="textPersonName" />
 
     <TextView
-        android:text="KeyEvent data:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:id="@+id/textView"
-        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:text="KeyEvent data:" />
 
     <TextView
-        android:text="MotionEvent data:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
         android:id="@+id/textView5"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <TextView
-        android:hint="MotionEvent data will appear here."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="29dp"
+        android:text="MotionEvent data:" />
+
+    <TextView
         android:id="@+id/motionEventData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView5"
         android:layout_alignBottom="@+id/textView5"
+        android:layout_marginStart="13dp"
         android:layout_toEndOf="@+id/textView5"
-        android:layout_marginStart="13dp" />
+        android:hint="MotionEvent data will appear here." />
 
     <TextView
-        android:hint="KeyEvent data will appear here."
+        android:id="@+id/keyEventData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/keyEventData"
         android:layout_above="@+id/textView5"
+        android:layout_alignEnd="@+id/motionEventData"
         android:layout_alignStart="@+id/motionEventData"
-        android:layout_alignEnd="@+id/motionEventData" />
+        android:hint="KeyEvent data will appear here." />
 
     <Button
-        android:text="Reset"
+        android:id="@+id/resetButton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/keyboardView"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="15dp"
-        android:id="@+id/resetButton"
-        style="@style/Widget.AppCompat.Button.Colored" />
+        android:text="Reset" />
 
     <gr.padam.tests.keystrokecollectorkeyboard.KeystrokeCollectorKeyboardView
+        android:id="@+id/keyboardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/keyboardView"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
