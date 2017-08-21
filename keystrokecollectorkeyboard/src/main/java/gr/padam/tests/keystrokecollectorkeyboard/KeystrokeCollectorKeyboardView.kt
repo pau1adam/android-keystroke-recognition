@@ -10,6 +10,13 @@ import android.view.View
  */
 class KeystrokeCollectorKeyboardView : KeyboardView {
 
+    private var maxPressure = -1f
+    private var maxSize = -1f
+    private var pressDuration: Long = -1L
+    private var startTime = -1L
+    private var endTime = -1L
+    private var key = "NO KEY"
+
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         setOnTouchListener(touchListener)
         onKeyboardActionListener = keyboardListener
