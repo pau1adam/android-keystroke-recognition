@@ -63,10 +63,18 @@
         android:text="Reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/keyboardView"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="15dp"
         android:id="@+id/resetButton"
         style="@style/Widget.AppCompat.Button.Colored" />
+
+    <gr.padam.tests.keystrokecollectorkeyboard.KeystrokeCollectorKeyboardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/keyboardView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
 
 </RelativeLayout>
