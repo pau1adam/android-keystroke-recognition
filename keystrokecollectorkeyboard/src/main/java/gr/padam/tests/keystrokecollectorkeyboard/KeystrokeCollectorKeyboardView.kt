@@ -3,6 +3,7 @@ package gr.padam.tests.keystrokecollectorkeyboard
 import android.content.Context
 import android.inputmethodservice.KeyboardView
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.view.View
 
 /**
@@ -12,7 +13,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
 
     private var maxPressure = -1f
     private var maxSize = -1f
-    private var pressDuration: Long = -1L
+    private var pressDuration = -1L
     private var startTime = -1L
     private var endTime = -1L
     private var key = "NO KEY"
@@ -22,14 +23,24 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
         onKeyboardActionListener = keyboardListener
     }
 
-    val touchListener = View.OnTouchListener { view, event ->
-        TODO("not implemented")
+    private val touchListener = View.OnTouchListener { _, event ->
+        val pressure = event.pressure
+        val size = event.size
+        when (event.action) {
+            MotionEvent.ACTION_DOWN -> startTime = event.eventTime
+            MotionEvent.ACTION_UP -> {
+                endTime = event.eventTime
+                pressDuration = endTime - startTime
+            }
+        }
+        setMaxValues(pressure, size)
+        false
     }
 
-    val keyboardListener = object : OnKeyboardActionListener {
+    private val keyboardListener = object : OnKeyboardActionListener {
 
         override fun onKey(primaryCode: Int, keyCodes: IntArray?) {
-            TODO("not implemented")
+            key = Character.toString(primaryCode.toChar())
         }
 
         override fun swipeRight() {
@@ -37,7 +48,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
         }
 
         override fun onPress(p0: Int) {
-            TODO("not implemented")
+            //do nothing
         }
 
         override fun onRelease(primaryCode: Int) {
@@ -59,6 +70,11 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
         override fun onText(text: CharSequence?) {
             TODO("not implemented")
         }
+    }
+
+    private fun setMaxValues(pressure: Float, size: Float) {
+        if (pressure > maxPressure) maxPressure = pressure
+        if (size > maxSize) maxSize = size
     }
 
 }
