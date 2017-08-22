@@ -1,6 +1,7 @@
 package gr.padam.tests.keystrokecollectorkeyboard
 
 import android.content.Context
+import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -21,6 +22,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         setOnTouchListener(touchListener)
         onKeyboardActionListener = keyboardListener
+        keyboard = Keyboard(context, R.xml.qwerty)
     }
 
     private val touchListener = View.OnTouchListener { _, event ->
