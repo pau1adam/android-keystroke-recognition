@@ -23,6 +23,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
         setOnTouchListener(touchListener)
         onKeyboardActionListener = keyboardListener
         keyboard = Keyboard(context, R.xml.qwerty)
+        isPreviewEnabled = false
     }
 
     private val touchListener = View.OnTouchListener { _, event ->
