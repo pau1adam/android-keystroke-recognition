@@ -14,7 +14,7 @@
 
 
     <TextView
-        android:text="Touch anywhere on the screen to display pressure and size"
+        android:text="@string/touch_anywhere_on_the_screen_to_display_pressure_and_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/displayMaxPressure"
         android:layout_weight="1"
-        android:hint="Max pressure will be displayed here."
+        android:hint="@string/max_pressure_will_be_displayed_here"
         android:layout_above="@+id/displaySize" />
 
     <TextView
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/displayPressure"
         android:layout_weight="1"
-        android:hint="Pressure will be displayed here."
+        android:hint="@string/pressure_will_be_displayed_here"
         android:layout_above="@+id/displaySize" />
 
     <TextView
@@ -42,17 +42,17 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:id="@+id/displayMaxSize"
-        android:hint="Max size will be displayed here." />
+        android:hint="@string/max_size_will_be_displayed_here" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:id="@+id/displaySize"
-        android:hint="Current size will be displayed here." />
+        android:hint="@string/current_size_will_be_displayed_here" />
 
     <Button
-        android:text="Reset"
+        android:text="@string/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

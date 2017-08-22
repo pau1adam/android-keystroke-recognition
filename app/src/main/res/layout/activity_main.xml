@@ -14,10 +14,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Made by Paul Adam." />
+        android:text="@string/made_by_paul_adam" />
 
     <Button
-        android:text="EditText Keyboard Test"
+        android:text="@string/edittext_keyboard_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/goToEditTextKeyboardTestButton"
@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Pressure Test"
+        android:text="@string/pressure_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="47dp"
