@@ -47,7 +47,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
         }
 
         override fun swipeRight() {
-            TODO("not implemented")
+            //do nothing
         }
 
         override fun onPress(p0: Int) {
@@ -55,23 +55,23 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
         }
 
         override fun onRelease(primaryCode: Int) {
-            TODO("not implemented")
+            //do nothing
         }
 
         override fun swipeLeft() {
-            TODO("not implemented")
+            //do nothing
         }
 
         override fun swipeUp() {
-            TODO("not implemented")
+            //do nothing
         }
 
         override fun swipeDown() {
-            TODO("not implemented")
+            //do nothing
         }
 
         override fun onText(text: CharSequence?) {
-            TODO("not implemented")
+            //do nothing
         }
     }
 
