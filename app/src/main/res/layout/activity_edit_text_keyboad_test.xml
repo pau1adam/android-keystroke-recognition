@@ -9,7 +9,6 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
 
-
     <EditText
         android:id="@+id/inputEditText"
         android:layout_width="wrap_content"
@@ -88,6 +87,8 @@
         android:layout_marginBottom="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
+        android:background="@color/background"
+        android:keyBackground="@drawable/key"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
