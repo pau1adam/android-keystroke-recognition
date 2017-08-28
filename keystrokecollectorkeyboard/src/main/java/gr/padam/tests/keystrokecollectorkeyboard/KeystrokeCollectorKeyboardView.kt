@@ -1,11 +1,13 @@
 package gr.padam.tests.keystrokecollectorkeyboard
 
+import android.app.Activity
 import android.content.Context
 import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import android.widget.EditText
 
 /**
  * Created by Pavlos Adam on 30-Jul-17.
@@ -44,6 +46,15 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
 
         override fun onKey(primaryCode: Int, keyCodes: IntArray?) {
             key = Character.toString(primaryCode.toChar())
+
+            val focusCurrent = (context as Activity).window.currentFocus
+            if (focusCurrent == null || focusCurrent !is EditText) {
+                reset()
+                return
+            }
+            val editable = focusCurrent.text
+            val start = focusCurrent.selectionStart
+            editable.insert(start, key)
         }
 
         override fun swipeRight() {
