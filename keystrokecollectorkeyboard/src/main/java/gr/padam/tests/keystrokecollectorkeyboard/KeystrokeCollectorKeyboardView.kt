@@ -75,6 +75,15 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
         }
     }
 
+    private fun reset() {
+        maxPressure = -1f
+        maxSize = -1f
+        pressDuration = -1L
+        startTime = -1L
+        endTime = -1L
+        key = "NO KEY"
+    }
+
     private fun setMaxValues(pressure: Float, size: Float) {
         if (pressure > maxPressure) maxPressure = pressure
         if (size > maxSize) maxSize = size
