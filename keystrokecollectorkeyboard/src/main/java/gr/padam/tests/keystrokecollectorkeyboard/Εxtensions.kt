@@ -3,8 +3,10 @@ package gr.padam.tests.keystrokecollectorkeyboard
 import android.app.Activity
 import android.content.Context
 import android.text.InputType
+import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.Toast
 
 /**
  * Created by Pavlos Adam on 27-Aug-17.
@@ -40,4 +42,16 @@ fun EditText.disableDefaultKeyboard() {
         editText.inputType = inType
         true
     }
+}
+
+fun View.toastShort(text: String){
+    Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+}
+
+fun View.toastLong(text: String){
+    Toast.makeText(context, text, Toast.LENGTH_LONG).show()
+}
+
+fun View.getString(resId: Int): String{
+    return context.getString(resId)
 }

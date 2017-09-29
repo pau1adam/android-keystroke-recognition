@@ -44,6 +44,8 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
 
     private val keyboardListener = object : OnKeyboardActionListener {
 
+        val KEYCODE_LANGUAGE_SWITCH = -101
+
         override fun onKey(primaryCode: Int, keyCodes: IntArray?) {
             key = Character.toString(primaryCode.toChar())
 
@@ -65,6 +67,9 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
                     }
                 }
                 Keyboard.KEYCODE_DONE -> focusCurrent.focusSearch(View.FOCUS_FORWARD)?.requestFocus()
+                Keyboard.KEYCODE_SHIFT -> toastShort(getString(R.string.key_not_supported))
+                Keyboard.KEYCODE_MODE_CHANGE -> toastShort(getString(R.string.key_not_supported))
+                KEYCODE_LANGUAGE_SWITCH -> toastShort(getString(R.string.key_not_supported))
                 else -> editable.insert(start, key)
             }
         }

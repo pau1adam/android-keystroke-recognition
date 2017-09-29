@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KeystrokeCollectorKeyboard</string>
+    <string name="key_not_supported">Selected key is currently not supported.</string>
 </resources>
