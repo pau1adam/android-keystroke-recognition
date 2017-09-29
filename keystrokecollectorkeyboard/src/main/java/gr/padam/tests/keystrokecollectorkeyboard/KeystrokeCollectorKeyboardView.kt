@@ -54,7 +54,19 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
             }
             val editable = focusCurrent.text
             val start = focusCurrent.selectionStart
-            editable.insert(start, key)
+            val end = focusCurrent.selectionEnd
+
+            when (primaryCode) {
+                Keyboard.KEYCODE_DELETE -> {
+                    if (start > 0) {
+                        editable.delete(start - 1, start)
+                    } else {
+                        editable.delete(start, end)
+                    }
+                }
+                Keyboard.KEYCODE_DONE -> focusCurrent.focusSearch(View.FOCUS_FORWARD)?.requestFocus()
+                else -> editable.insert(start, key)
+            }
         }
 
         override fun swipeRight() {
