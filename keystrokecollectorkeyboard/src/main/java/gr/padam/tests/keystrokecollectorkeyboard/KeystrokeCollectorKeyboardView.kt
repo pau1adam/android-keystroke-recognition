@@ -5,9 +5,11 @@ import android.content.Context
 import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
+import gr.padam.keyrec.KeyPress
 
 /**
  * Created by Pavlos Adam on 30-Jul-17.
@@ -72,6 +74,8 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
                 KEYCODE_LANGUAGE_SWITCH -> toastShort(getString(R.string.key_not_supported))
                 else -> editable.insert(start, key)
             }
+            val key = KeyPress(maxPressure, maxSize, pressDuration, startTime, endTime, key)
+            Log.d("potato", key.toString())
         }
 
         override fun swipeRight() {
