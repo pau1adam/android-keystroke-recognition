@@ -1,1 +1,1 @@
-include ':app', ':keystrokecollectorkeyboard'
+include ':app', ':keystrokecollectorkeyboard', ':keyrec'
