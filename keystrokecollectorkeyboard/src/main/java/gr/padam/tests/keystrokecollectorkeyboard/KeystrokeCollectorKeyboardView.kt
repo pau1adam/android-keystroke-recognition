@@ -23,6 +23,8 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
     private var endTime = -1L
     private var key = "NO KEY"
 
+    private var showingQwerty = true
+
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         setOnTouchListener(touchListener)
         onKeyboardActionListener = keyboardListener
@@ -70,7 +72,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
                 }
                 Keyboard.KEYCODE_DONE -> focusCurrent.focusSearch(View.FOCUS_FORWARD)?.requestFocus()
                 Keyboard.KEYCODE_SHIFT -> toastShort(getString(R.string.key_not_supported))
-                Keyboard.KEYCODE_MODE_CHANGE -> toastShort(getString(R.string.key_not_supported))
+                Keyboard.KEYCODE_MODE_CHANGE -> toggleSymbolsKeyboard()
                 KEYCODE_LANGUAGE_SWITCH -> toastShort(getString(R.string.key_not_supported))
                 else -> editable.insert(start, key)
             }
@@ -119,6 +121,15 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
     private fun setMaxValues(pressure: Float, size: Float) {
         if (pressure > maxPressure) maxPressure = pressure
         if (size > maxSize) maxSize = size
+    }
+
+    fun toggleSymbolsKeyboard() {
+        keyboard = if (showingQwerty) {
+            Keyboard(context, R.xml.symbols)
+        } else {
+            Keyboard(context, R.xml.qwerty)
+        }
+        showingQwerty = !showingQwerty
     }
 
 }
