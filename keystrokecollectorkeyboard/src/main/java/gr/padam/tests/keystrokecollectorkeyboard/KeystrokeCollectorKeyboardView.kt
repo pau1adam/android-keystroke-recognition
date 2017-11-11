@@ -23,7 +23,8 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
     private var endTime = -1L
     private var key = "NO KEY"
 
-    private var showingQwerty = true
+    private var isShowingQwerty = true
+    private var isShiftPressed = false
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         setOnTouchListener(touchListener)
@@ -52,6 +53,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
 
         override fun onKey(primaryCode: Int, keyCodes: IntArray?) {
             key = Character.toString(primaryCode.toChar())
+            if (isShiftPressed) key = key.toUpperCase()
 
             val focusCurrent = (context as Activity).window.currentFocus
             if (focusCurrent == null || focusCurrent !is EditText) {
@@ -71,7 +73,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
                     }
                 }
                 Keyboard.KEYCODE_DONE -> focusCurrent.focusSearch(View.FOCUS_FORWARD)?.requestFocus()
-                Keyboard.KEYCODE_SHIFT -> toastShort(getString(R.string.key_not_supported))
+                Keyboard.KEYCODE_SHIFT -> toggleLetterCase()
                 Keyboard.KEYCODE_MODE_CHANGE -> toggleSymbolsKeyboard()
                 KEYCODE_LANGUAGE_SWITCH -> toastShort(getString(R.string.key_not_supported))
                 else -> editable.insert(start, key)
@@ -124,12 +126,19 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
     }
 
     fun toggleSymbolsKeyboard() {
-        keyboard = if (showingQwerty) {
+        keyboard = if (isShowingQwerty) {
+            isShiftPressed = false
             Keyboard(context, R.xml.symbols)
         } else {
             Keyboard(context, R.xml.qwerty)
         }
-        showingQwerty = !showingQwerty
+        isShowingQwerty = !isShowingQwerty
+    }
+
+    fun toggleLetterCase() {
+        isShiftPressed = !isShiftPressed
+        isShifted = isShiftPressed
+        invalidateAllKeys()
     }
 
 }
