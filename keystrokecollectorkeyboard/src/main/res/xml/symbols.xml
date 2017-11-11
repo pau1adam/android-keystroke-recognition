@@ -37,38 +37,37 @@
     </Row>
 
     <Row>
-        <Key android:codes="64" android:keyLabel="\@" android:keyEdgeFlags="left"/>
+        <Key android:codes="64" android:keyLabel="\@"
+            android:horizontalGap="5%p" android:keyEdgeFlags="left"/>
         <Key android:codes="35" android:keyLabel="\#"/>
         <Key android:codes="36" android:keyLabel="$"/>
         <Key android:codes="37" android:keyLabel="%"/>
         <Key android:codes="38" android:keyLabel="&amp;"/>
-        <Key android:codes="42" android:keyLabel="*"/>
+        <Key android:codes="43" android:keyLabel="+"/>
         <Key android:codes="45" android:keyLabel="-"/>
-        <Key android:codes="61" android:keyLabel="="/>
         <Key android:codes="40" android:keyLabel="("/>
         <Key android:codes="41" android:keyLabel=")" android:keyEdgeFlags="right"/>
     </Row>
 
     <Row>
-        <Key android:codes="-1" android:keyIcon="@drawable/shift"
-            android:keyWidth="15%p" android:isModifier="true"
-            android:isSticky="true" android:keyEdgeFlags="left"/>
-        <Key android:codes="33" android:keyLabel="!" />
+        <Key android:codes="61" android:keyLabel="=" android:keyEdgeFlags="left"/>
+        <Key android:codes="33" android:keyLabel="!"/>
         <Key android:codes="34" android:keyLabel="&quot;"/>
         <Key android:codes="39" android:keyLabel="\'"/>
         <Key android:codes="58" android:keyLabel=":"/>
         <Key android:codes="59" android:keyLabel=";"/>
+        <Key android:codes="42" android:keyLabel="*"/>
         <Key android:codes="47" android:keyLabel="/" />
         <Key android:codes="63" android:keyLabel="\?"/>
         <Key android:codes="-5" android:keyIcon="@drawable/backspace"
-            android:keyWidth="15%p" android:keyEdgeFlags="right"
+            android:keyWidth="10%p" android:keyEdgeFlags="right"
             android:isRepeatable="true"/>
     </Row>
 
     <Row  android:rowEdgeFlags="bottom">
         <Key android:codes="-2" android:keyLabel="ABC"
             android:keyWidth="20%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="44" android:keyLabel="," android:keyWidth="10%p" />
+        <Key android:codes="95" android:keyLabel="_" android:keyWidth="10%p" />
         <!--
             android:codes: -101 is not a framework-defined key code but a key code that is
             privately defined in com.example.android.softkeyboard.LatinKeyboardView.
