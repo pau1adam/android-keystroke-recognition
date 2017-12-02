@@ -1,20 +1,21 @@
 package padam.keystroke_recognition
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MotionEvent
 import kotlinx.android.synthetic.main.activity_pressure_test.*
 
 class PressureTestActivity : AppCompatActivity() {
 
-    var maxPressure = -1f
-    var maxSize = -1f
+    private var maxPressure = -1f
+    private var maxSize = -1f
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pressure_test)
         activity_pressure_test.setOnTouchListener { _, event -> pressureTestClick(event) }
-        resetButton.setOnClickListener { _ -> resetFields() }
+        resetButton.setOnClickListener { resetFields() }
     }
 
     private fun pressureTestClick(event: MotionEvent): Boolean {
