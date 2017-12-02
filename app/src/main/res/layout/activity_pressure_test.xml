@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:gravity="clip_vertical"
-    tools:context="padam.keystroke_recognition.PressureTestActivity">
+    tools:context="padam.keyrecapp.PressureTestActivity">
 
 
     <TextView

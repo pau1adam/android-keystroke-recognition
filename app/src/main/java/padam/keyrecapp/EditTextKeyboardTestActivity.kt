@@ -1,4 +1,4 @@
-package padam.keystroke_recognition
+package padam.keyrecapp
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package padam.keystroke_recognition;
+package padam.keyrecapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

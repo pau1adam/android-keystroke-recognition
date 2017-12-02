@@ -1,4 +1,4 @@
-package padam.keystroke_recognition
+package padam.keyrecapp
 
 import android.app.Application
 import timber.log.Timber

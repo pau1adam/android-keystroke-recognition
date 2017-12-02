@@ -5,7 +5,7 @@
     android:id="@+id/activity_edit_text_keyboad_test"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="padam.keystroke_recognition.EditTextKeyboardTestActivity"
+    tools:context="padam.keyrecapp.EditTextKeyboardTestActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
 
