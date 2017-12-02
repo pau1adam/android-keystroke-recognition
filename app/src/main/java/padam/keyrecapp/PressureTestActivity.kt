@@ -18,8 +18,8 @@ class PressureTestActivity : AppCompatActivity() {
     }
 
     private fun pressureTestClick(event: MotionEvent): Boolean {
-        displayPressure.text = "Pressure: " + maxPressure.toString()
-        displaySize.text = "Size: " + maxSize.toString()
+        displayPressure.text = "Pressure: " + event.pressure
+        displaySize.text = "Size: " + event.size
         maxValues(event.pressure, event.size)
         return true
     }
