@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".PressureTestActivity" />
-        <activity android:name=".EditTextKeyboardTestActivity"/>
+        <activity
+            android:name=".EditTextKeyboardTestActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
