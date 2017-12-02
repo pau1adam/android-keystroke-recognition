@@ -10,16 +10,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        goToPressureTestButton.setOnClickListener { _ -> goToPressureTestActivity() }
-        goToEditTextKeyboardTestButton.setOnClickListener { _ -> goToEditTextKeyboardTestActivity() }
+        goToPressureTestButton.setOnClickListener { goToPressureTestActivity() }
+        goToEditTextKeyboardTestButton.setOnClickListener { goToEditTextKeyboardTestActivity() }
     }
 
-    fun goToPressureTestActivity() {
+    private fun goToPressureTestActivity() {
         val pressureTestIntent = Intent(this, PressureTestActivity::class.java)
         startActivity(pressureTestIntent)
     }
 
-    fun goToEditTextKeyboardTestActivity() {
+    private fun goToEditTextKeyboardTestActivity() {
         val editTextKeyboadTestIntent = Intent(this, EditTextKeyboardTestActivity::class.java)
         startActivity(editTextKeyboadTestIntent)
     }
