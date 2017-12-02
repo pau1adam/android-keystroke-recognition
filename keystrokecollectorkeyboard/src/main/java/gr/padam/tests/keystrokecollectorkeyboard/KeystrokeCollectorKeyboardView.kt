@@ -72,7 +72,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
                         editable.delete(start, end)
                     }
                 }
-                Keyboard.KEYCODE_DONE -> focusCurrent.focusSearch(View.FOCUS_FORWARD)?.requestFocus()
+                Keyboard.KEYCODE_DONE -> focusCurrent.focusSearch(View.FOCUS_DOWN)?.requestFocus()
                 Keyboard.KEYCODE_SHIFT -> toggleLetterCase()
                 Keyboard.KEYCODE_MODE_CHANGE -> toggleSymbolsKeyboard()
                 KEYCODE_LANGUAGE_SWITCH -> toastShort(getString(R.string.key_not_supported))
