@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
+import android.text.Editable
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
@@ -65,13 +66,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
             val end = focusCurrent.selectionEnd
 
             when (primaryCode) {
-                Keyboard.KEYCODE_DELETE -> {
-                    if (start > 0) {
-                        editable.delete(start - 1, start)
-                    } else {
-                        editable.delete(start, end)
-                    }
-                }
+                Keyboard.KEYCODE_DELETE -> deleteKeyImplementation(editable, start, end)
                 Keyboard.KEYCODE_DONE -> focusCurrent.focusSearch(View.FOCUS_DOWN)?.requestFocus()
                 Keyboard.KEYCODE_SHIFT -> toggleLetterCase()
                 Keyboard.KEYCODE_MODE_CHANGE -> toggleSymbolsKeyboard()
@@ -141,4 +136,11 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
         invalidateAllKeys()
     }
 
+    private fun deleteKeyImplementation(editable: Editable, start: Int, end: Int) {
+        if (start > 0) {
+            editable.delete(start - 1, start)
+        } else {
+            editable.delete(start, end)
+        }
+    }
 }
