@@ -1,4 +1,4 @@
-package padam.keystroke_recognition;
+package padam.keyrecapp;
 
 import org.junit.Test;
 

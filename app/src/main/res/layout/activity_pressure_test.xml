@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pressure_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:gravity="clip_vertical"
+    tools:context="padam.keyrecapp.PressureTestActivity">
+
+
+    <TextView
+        android:text="@string/touch_anywhere_on_the_screen_to_display_pressure_and_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/textView4"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayMaxPressure"
+        android:layout_weight="1"
+        android:hint="@string/max_pressure_will_be_displayed_here"
+        android:layout_above="@+id/displaySize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayPressure"
+        android:layout_weight="1"
+        android:hint="@string/pressure_will_be_displayed_here"
+        android:layout_above="@+id/displaySize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/displayMaxSize"
+        android:hint="@string/max_size_will_be_displayed_here" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/displaySize"
+        android:hint="@string/current_size_will_be_displayed_here" />
+
+    <Button
+        android:text="@string/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:id="@+id/resetButton"
+        style="@style/Widget.AppCompat.Button.Colored" />
+</LinearLayout>

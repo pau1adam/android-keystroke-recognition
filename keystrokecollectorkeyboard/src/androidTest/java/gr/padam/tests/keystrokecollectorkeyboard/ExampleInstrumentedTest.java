@@ -1,4 +1,4 @@
-package padam.keystroke_recognition;
+package gr.padam.tests.keystrokecollectorkeyboard;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("padam.keystroke_recognition", appContext.getPackageName());
+        assertEquals("gr.padam.tests.keystrokecollectorkeyboard.test", appContext.getPackageName());
     }
 }

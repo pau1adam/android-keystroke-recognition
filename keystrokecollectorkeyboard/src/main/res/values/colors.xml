@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#37474F</color>
+    <color name="keyPressed">#1E3238</color>
+    <color name="actionKeys">@color/white</color>
+    <color name="white">#FFFFFF</color>
+</resources>
