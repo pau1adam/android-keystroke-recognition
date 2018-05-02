@@ -2,6 +2,8 @@ package padam.keyrecapp
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
+import android.view.MenuItem
 import gr.padam.keyrec.KeyPress
 import gr.padam.tests.keystrokecollectorkeyboard.disableDefaultKeyboard
 import io.reactivex.observers.DisposableObserver
@@ -13,9 +15,19 @@ class EditTextKeyboardTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_text_keyboad_test)
-        resetButton.setOnClickListener { resetFields() }
+        setSupportActionBar(toolbar)
         inputEditText.disableDefaultKeyboard()
         keyboardView.observer = observer
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_activity_edit_text_keyboad_test, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        resetFields()
+        return true
     }
 
     private fun resetFields() {
