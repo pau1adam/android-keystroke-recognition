@@ -36,6 +36,7 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.5.1'
     implementation "android.arch.lifecycle:extensions:1.0.0"
     implementation "io.reactivex.rxjava2:rxjava:$rxjava2_version"
+    compile project(path: ':keyrec')
 }
 repositories {
     mavenCentral()

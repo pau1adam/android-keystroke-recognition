@@ -11,6 +11,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
 import gr.padam.keyrec.KeyPress
+import io.reactivex.Observer
 
 /**
  * Created by Pavlos Adam on 30-Jul-17.
@@ -26,6 +27,8 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
 
     private var isShowingQwerty = true
     private var isShiftPressed = false
+
+    var observer: Observer<KeyPress>? = null
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         setOnTouchListener(touchListener)
@@ -74,7 +77,7 @@ class KeystrokeCollectorKeyboardView : KeyboardView {
                 else -> editable.insert(start, key)
             }
             val key = KeyPress(maxPressure, maxSize, pressDuration, startTime, endTime, key)
-            Log.d("potato", key.toString())
+            observer?.onNext(key)
         }
 
         override fun swipeRight() {
