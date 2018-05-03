@@ -9,7 +9,7 @@
     <string name="made_by_paul_adam">Made by Paul Adam.</string>
     <string name="edittext_keyboard_test">EditText Keyboard Test</string>
     <string name="pressure_test">Pressure Test</string>
-    <string name="touch_anywhere_on_the_screen_to_display_pressure_and_size">Touch anywhere on the screen to display pressure and size</string>
+    <string name="touch_anywhere_on_the_screen_to_display_pressure_and_size">Touch anywhere on the screen to display pressure and size.</string>
     <string name="max_pressure_will_be_displayed_here">Max pressure will be displayed here.</string>
     <string name="pressure_will_be_displayed_here">Pressure will be displayed here.</string>
     <string name="max_size_will_be_displayed_here">Max size will be displayed here.</string>

@@ -13,6 +13,7 @@ class PressureTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pressure_test)
+        setSupportActionBar(toolbar)
         model = ViewModelProviders.of(this).get(PressureTestViewModel::class.java)
         setupUI()
     }
